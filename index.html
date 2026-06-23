@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мое Био — Zaqod</title>
+    <title>Zaqod</title>
     <style>
-        /* Общие настройки страницы */
         body {
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Roboto, sans-serif;
-            /* Измененный градиент на темно-коричневый */
             background: radial-gradient(circle, #3e2723 0%, #1b0000 100%);
             color: #f8fafc;
             display: flex;
@@ -19,9 +17,8 @@
             min-height: 100vh;
         }
 
-        /* Карточка био */
         .bio-card {
-            background: rgba(45, 30, 25, 0.7); /* Более теплый фон карточки */
+            background: rgba(45, 30, 25, 0.7);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 40px;
@@ -32,40 +29,49 @@
             width: 90%;
         }
 
-        /* Аватарка (теперь как картинка) */
         .avatar {
             width: 90px;
             height: 90px;
             border-radius: 50%;
             margin: 0 auto 20px;
-            box-shadow: 0 0 20px rgba(255, 138, 101, 0.4); /* Теплое свечение */
+            box-shadow: 0 0 20px rgba(255, 138, 101, 0.4); 
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden; /* Чтобы картинка не вылезала за края круга */
-            background: #5d4037; /* Фон на случай, если картинка не загрузится */
+            overflow: hidden; 
+            background: #5d4037; 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .avatar:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 138, 101, 0.7);
         }
 
         .avatar img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Растягивает картинку, сохраняя пропорции */
+            object-fit: cover; 
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .avatar:hover img {
+            transform: scale(1.15);
         }
 
         h1 {
             font-size: 28px;
             margin: 0 0 10px 0;
             letter-spacing: -0.5px;
-            color: #ffe0b2; /* Светло-кремовый заголовок */
+            color: #ffe0b2;
         }
 
         .tagline {
-            color: #ff8a65; /* Оранжевый акцент */
+            color: #ff8a65; 
             font-weight: 600;
             margin-bottom: 20px;
         }
 
-        /* Блок текста */
         .about-box {
             background: rgba(20, 10, 5, 0.6);
             padding: 15px;
@@ -78,25 +84,22 @@
             text-align: left;
         }
 
-        /* Контейнер для кнопок */
         .links-container {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
 
-        /* Кнопки-ссылки */
         .btn {
             text-decoration: none;
             color: white;
             padding: 12px;
             border-radius: 8px;
             font-weight: 600;
-            transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-out;
             display: block;
         }
 
-        /* Стили для разных кнопок */
         .twitch-btn { background: #9146ff; }
         .twitch-btn:hover { background: #772ce8; transform: translateY(-2px); }
 
@@ -106,10 +109,9 @@
         .github-btn { background: #475569; }
         .github-btn:hover { background: #334155; transform: translateY(-2px); }
 
-        /* Новая кнопка DonationAlerts */
         .donate-btn {
-            background: #ff9800; /* Основной цвет DonationAlerts */
-            color: #1b0000; /* Темный текст для контраста */
+            background: #ff9800; 
+            color: #1b0000; 
         }
         .donate-btn:hover {
             background: #f57c00;
@@ -120,13 +122,12 @@
 <body>
 
     <div class="bio-card">
-        <!-- БЛОК АВАТАРКИ. Читайте инструкцию ниже, как вставить свое фото -->
         <div class="avatar">
             <img src="g.jpg" alt="Zaqod Avatar">
         </div>
         
         <h1>Привет, я Zaqod</h1>
-        <p class="tagline"> Энтузиаст | Стример | Ютубер</p>
+        <p class="tagline">Энтузиаст | Стример | Ютубер</p>
         
         <div class="about-box">
             Привет! Я Zaqod — стример, ютубер и тиктокер из Иркутска. Снимаю контент про Linux, провожу стримы на Twitch и сам пользуюсь тем, о чём рассказываю.
@@ -137,8 +138,7 @@
             <a href="https://www.youtube.com/@ZAQOD" class="btn youtube-btn" target="_blank">YouTube</a>
             <a href="https://github.com/Zaqod" class="btn github-btn" target="_blank">GitHub</a>
             
-            <!-- НОВАЯ КНОПКА. Замените '#' на вашу ссылку DonationAlerts -->
-            <a href="https://www.donationalerts.com/r/zaqod" class="btn donate-btn" target="_blank">💰 Поддержать монетой</a>
+            <a href="https://www.donationalerts.com/r/zaqod" class="btn donate-btn" target="_blank">Поддержать</a>
         </div>
     </div>
 
